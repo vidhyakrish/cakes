@@ -17,13 +17,11 @@ export default class CakesList extends React.Component {
 
 	componentWillMount () {
 		var url = 'https://gist.githubusercontent.com/hart88/198f29ec5114a3ec3460/raw/8dd19a88f9b8d24c23d9960f3300d0c917a4f07c/cake.json'
-		Request.get(url)
-		.accept('json')
+		fetch(url)
+		.then(res => res.json())
+		.then(cakes => this.setState({ cakes }));
 
-		.then(res => {
-			console.log(res.body.text);
-			this.setState({cakes: res.text});
-		})
+
 	}
 
 
