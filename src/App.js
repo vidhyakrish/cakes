@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Request from 'superagent';
 
 
-import Header from './Header';
-import CakesList from './CakesList';
-import Search from './Search';
+import Header from './Views/Header';
+import CakesList from './Views/CakesList';
+import Search from './Views/Search';
 
-import './App.css';
+import './styles/App.css';
 
 class App extends Component {
   constructor(props) {
@@ -36,9 +36,6 @@ class App extends Component {
     });
 
     this.filterCakes();
-
-
-
   }
 
   filterCakes(){
@@ -48,18 +45,17 @@ class App extends Component {
 
     if(text.length >= 2){
       cakes.forEach(cake => {
-        if(cake.title.indexOf(text) !== -1){
+        if(cake.title.toLowerCase().indexOf(text) !== -1)
           cakesArray.push(cake);
-        }
       });
 
       this.setState({
         cakes:cakesArray
       })
 
-    }else{
-      this.getAllCakes();
-    }
+    }else
+    this.getAllCakes();
+    
   }
 
 
@@ -73,7 +69,7 @@ class App extends Component {
       <Header />
       <Search filterText={this.state.filterText} onFilterTextInput={this.handleFilterTextInput}/>
       <CakesList cakes={this.state.cakes} filterText={this.state.filterText}/>
-      
+
       </div>
       );
   }
