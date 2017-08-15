@@ -5,7 +5,7 @@ import Request from 'superagent';
 export default class Search extends React.Component {
 	constructor(props) {
 		super(props);
-		this.handleChange = this.handleChange.bind(this);
+		this.handleFilterTextInputChange = this.handleFilterTextInputChange.bind(this);
 	}
 
 	componentDidMount() {
@@ -16,19 +16,14 @@ export default class Search extends React.Component {
 
 	}
 
-	handleChange (event) {
-		var value = event.target.value
-		console.log(value);
-		//this.setState({y: value})
+	handleFilterTextInputChange(e) {
+		this.props.onFilterTextInput(e.target.value);
 	}
 
 	render() {
-
-
-
 		return (
 
-			<input  placeholder='select' onChange={this.handleChange} />
+			<input  placeholder='search' value={this.props.filterText}  onChange={this.handleFilterTextInputChange}/>
 			)
 
 	}
