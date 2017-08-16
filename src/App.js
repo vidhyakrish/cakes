@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Request from 'superagent';
 
 
 import Header from './Views/Header';
@@ -14,8 +13,6 @@ class App extends Component {
     this.state = { filterText: '', cakes :[]};
 
     this.handleFilterTextInput = this.handleFilterTextInput.bind(this);
-
-
 
   }
 
@@ -55,7 +52,7 @@ class App extends Component {
 
     }else
     this.getAllCakes();
-    
+
   }
 
 
