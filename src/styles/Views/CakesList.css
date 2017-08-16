@@ -1,12 +1,11 @@
  @import url(//fonts.googleapis.com/css?family=Lato:300,400,700|Sacramento|Abril+Fatface|Six+Caps|Cardo:400italic,700);
 
-.grid {
+ .grid {
   position: relative;
 }
 
 /* Grid item */
 .grid__item {
-
   /*padding: 45px 55px 30px;*/
   position: relative;
   color: inherit;

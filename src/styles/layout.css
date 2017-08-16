@@ -58,3 +58,11 @@
     width: 16.66%;
   }
 }
+
+/*@media screen and (min-width:300px) {
+
+   3 columns 
+  .grid__item {
+    width: 70%;
+  }
+}*/

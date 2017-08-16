@@ -22,7 +22,10 @@ export default class Search extends React.Component {
 
   render() {
     return (
-       <input  placeholder='search' className="search-input" value={this.props.filterText}  onChange={this.handleFilterTextInputChange}/>
+      <div>
+      <h3><a href='/add'>Add a cake </a></h3>
+      <input  placeholder='Search..' className="search-input" value={this.props.filterText}  onChange={this.handleFilterTextInputChange}/>
+      </div>
       )
 
   }

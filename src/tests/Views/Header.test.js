@@ -9,14 +9,15 @@ it('renders without crashing', () => {
 });
 
 it("renders a h2", function () {
-    var component = ReactTestUtils.renderIntoDocument(
-        <Header />
+  var component = ReactTestUtils.renderIntoDocument(
+    <Header />
     );
 
-    var h2 = ReactTestUtils.findRenderedDOMComponentWithTag(
-       component, 'h2'
-    );
+  var h2 = ReactTestUtils.findRenderedDOMComponentWithTag(
+   component, 'h2'
+   );
 
-    expect(ReactDOM.findDOMNode(h2).textContent)
-        .toEqual("Cake Gallery");
+  expect(ReactDOM.findDOMNode(h2).textContent)
+  .toEqual("Cake Gallery");
 });
+

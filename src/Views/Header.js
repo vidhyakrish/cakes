@@ -3,27 +3,27 @@ import logo from '../images/logo.svg';
 import '../styles/Views/Header.css';
 
 export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+	constructor(props) {
+		super(props);
+	}
 
-  componentDidMount() {
+	componentDidMount() {
 
-  }
+	}
 
-  componentWillUnmount() {
+	componentWillUnmount() {
 
-  }
+	}
 
 
-  render() {
-    return (
-      <div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h2>Cake Gallery</h2>
-      </div>
-      );
-  }
+	render() {
+		return (
+			<div className="App-header">
+			<a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
+			<h2><a href="/">Cake Gallery</a></h2>
+			</div>
+			);
+	}
 }
 
 
