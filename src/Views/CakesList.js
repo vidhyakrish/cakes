@@ -2,15 +2,25 @@ import React, { Component } from 'react';
 import {Button, Col, Form, FormGroup, FormControl, ControlLabel, Navbar, Row} from 'react-bootstrap'
 import '../styles/Views/CakesList.css';
 
+
+
+
 export default class CakesList extends React.Component {
   constructor(props) {
     super(props);
+
+
   }
 
   componentDidMount() {
+
   }
+
   componentWillMount () {
+
+
   }
+
 
   render() {
     if (!this.props.cakes.length) return <p>LOADING</p>
@@ -31,6 +41,8 @@ export default class CakesList extends React.Component {
 
         );
   }
+
+
 }
 
 
