@@ -15,7 +15,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
       <Route path='/' component={Home} />
       <Route path='/add' component={Add} />
       </Router>
