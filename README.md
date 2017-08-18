@@ -7,4 +7,6 @@ This app simply renders a list of cakes from (https://gist.githubusercontent.com
 
  To run simply 'npm install' and then'npm start'
  
+ server running at http://localhost:3000/
+ 
  
